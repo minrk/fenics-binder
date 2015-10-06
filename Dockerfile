@@ -7,10 +7,10 @@ RUN apt-get -y -qq update && apt-get -y -qq install rubygems gfortran libglu-dev
 RUN ln -s /usr/lib/x86_64-linux-gnu /usr/lib64
 USER main
 
-RUN conda create -y -q -n fenics -c minrk python=2.7 anaconda fenics
+RUN conda create -y -q -n fenics -c minrk python=2.7 anaconda fenics > /dev/null
 # RUN conda install -y jupyter
 # install ipykernel as second stage, since dependency resolution is wrong if it's all in one command
-RUN conda install -y -q -n fenics ipykernel
+RUN conda install -y -q -n fenics ipykernel > /dev/null
 
 # make fenics kernel for env
 RUN gem install --user a2km
