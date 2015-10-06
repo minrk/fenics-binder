@@ -1,4 +1,5 @@
 import glob
+import json
 import io
 import os
 from subprocess import Popen, PIPE, check_call
@@ -38,6 +39,19 @@ def rst2ipynb(name):
     notedown.communicate(md)
     if notedown.returncode:
         sys.exit("notedown failed")
+    
+    # associate notebooks with fenics kernel
+    with io.open(dst) as f:
+        nb = json.load(f)
+    
+    nb['metadata']['kernelspec'] = {
+        "display_name": "Python 2 (fenics)",
+        "language": "python",
+        "name": "fenics",
+    }
+    with io.open(dst, 'w') as f:
+        json.dump(nb, f, indent=1, sort_keys=True)
+        f.write('\n')
 
 for name in sorted(os.listdir(documented)):
     print(name)
