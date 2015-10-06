@@ -22,3 +22,9 @@ RUN ln -s /home/main/.local/jupyter/kernels/fenics /home/main/.ipython/kernels/f
 ADD test.py /home/main/test.py
 RUN bash -c "source activate fenics && python test.py"
 
+# populate with dolfin notebooks, auto-converted with pandoc + notedown:
+RUN bash -c "source activate fenics && pip install -e git+https://github.com/aaren/notedown#egg=notedown"
+RUN wget https://bitbucket.org/fenics-project/dolfin/downloads/dolfin-1.6.0.tar.gz
+RUN tar -xzf dolfin-1.6.0.tar.gz
+ADD rst2ipynb.py rst2ipynb.py
+RUN bash -c "source activate fenics && python rst2ipynb.py"
