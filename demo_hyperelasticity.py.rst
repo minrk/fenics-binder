@@ -23,6 +23,7 @@ Specifying matplotlib as backend::
     %matplotlib inline
     import matplotlib.pyplot as plt
     parameters["plotting_backend"]="matplotlib"
+
 The behavior of the form compiler FFC can be adjusted by prescribing
 various parameters. Here, we want to use some of the optimization
 features. ::

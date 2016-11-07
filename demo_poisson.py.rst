@@ -83,6 +83,7 @@ Specifying matplotlib as backend::
     %matplotlib inline
     import matplotlib.pyplot as plt
     parameters["plotting_backend"]="matplotlib"
+
 We begin by defining a mesh of the domain and a finite element
 function space :math:`V` relative to this mesh. As the unit square is
 a very standard domain, we can use a built-in mesh provided by the

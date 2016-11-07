@@ -114,6 +114,7 @@ Specifying matplotlib as backend::
     %matplotlib inline
     import matplotlib.pyplot as plt
     parameters["plotting_backend"]="matplotlib"
+
 .. index:: Expression
 
 A class which will be used to represent the initial conditions is then

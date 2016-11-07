@@ -132,7 +132,8 @@ Specifying matplotlib as backend::
 
   %matplotlib inline
   import matplotlib.pyplot as plt
-  parameters["plotting_backend"]="matplotlib"  import numpy as np
+  parameters["plotting_backend"]="matplotlib"
+  import numpy as np
   if not has_linear_algebra_backend("PETSc"):
       print("DOLFIN has not been configured with PETSc. Exiting.")
       exit()

@@ -106,6 +106,7 @@ Specifying matplotlib as backend::
     %matplotlib inline
     import matplotlib.pyplot as plt
     parameters["plotting_backend"]="matplotlib"
+
 Next, some parameters for the form compiler are set::
 
     # Optimization options for the form compiler

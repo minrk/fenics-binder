@@ -160,6 +160,7 @@ Specifying matplotlib as backend::
     %matplotlib inline
     import matplotlib.pyplot as plt
     parameters["plotting_backend"]="matplotlib"
+
 We begin by defining a mesh of the domain and a finite element
 function space V relative to this mesh. We used the built-in mesh
 provided by the class :py:class:`UnitSquareMesh

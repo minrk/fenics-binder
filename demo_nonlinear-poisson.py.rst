@@ -109,6 +109,7 @@ Specifying matplotlib as backend::
     %matplotlib inline
     import matplotlib.pyplot as plt
     parameters["plotting_backend"]="matplotlib"
+
 Next, we want to consider the Dirichlet boundary condition. A simple
 Python function, returning a boolean, can be used to define the
 subdomain for the Dirichlet boundary condition (:math:`\Gamma_D`). The

@@ -35,6 +35,7 @@ Specifying matplotlib as backend::
    %matplotlib inline
    import matplotlib.pyplot as plt
    parameters["plotting_backend"]="matplotlib"
+
 The first mesh we make is a mesh over the unit interval
 :math:`(0,1)`. :py:class:`UnitIntervalMesh
 <dolfin.cpp.mesh.UnitIntervalMesh>` takes the number of intervals

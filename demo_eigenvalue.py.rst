@@ -30,7 +30,8 @@ Specifying matplotlib as backend::
 
     %matplotlib inline
     import matplotlib.pyplot as plt
-    parameters["plotting_backend"]="matplotlib"    # Test for PETSc and SLEPc
+    parameters["plotting_backend"]="matplotlib"
+    # Test for PETSc and SLEPc
   
     if not has_linear_algebra_backend("PETSc"):
         print("DOLFIN has not been configured with PETSc. Exiting.")

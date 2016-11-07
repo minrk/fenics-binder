@@ -103,6 +103,7 @@ Specifying matplotlib as backend::
    %matplotlib inline
    import matplotlib.pyplot as plt
    parameters["plotting_backend"]="matplotlib"
+
 Then, we check that dolfin is configured with the backend called
 PETSc, since it provides us with a wide range of methods used by
 :py:class:`KrylovSolver <dolfin.cpp.la.KrylovSolver>`. We set PETSc as
